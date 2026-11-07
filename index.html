@@ -3,294 +3,251 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kiprono Yator | Portfolio</title>
-<meta name="description" content="Portfolio of Kiprono Yator: branding, graphic design and UI/UX.">
+<title>doelynet | Software engineer &amp; solutions architect</title>
+<meta name="description" content="Portfolio of a software engineer, solutions architect and SOC analyst based in Nairobi, Kenya.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#a9b4c4;--ink:#101114;--card:#fff;--acc:#ff4b1f;--vio:#5a1cff;--ph:#c6cedb;--r:16px}
+:root{--bg:#050505;--ink:#f2f1ed;--mut:#a9adb0;--tape:#d9d6cf;--line:rgba(242,241,237,.28)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{overflow-x:clip;background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,sans-serif}
+body{background:var(--bg);color:var(--ink);font:300 15px/1.5 "Inter Tight",Helvetica,Arial,sans-serif;overflow-x:clip}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--vio);outline-offset:3px}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-section{padding:56px 0}
-h1,h2,h3,.ghost{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;line-height:1}
-.ghost{font-size:clamp(64px,15vw,200px);line-height:.95;background:linear-gradient(#fff 15%,rgba(255,255,255,0) 95%);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
-.ph{background:var(--ph);border-radius:var(--r);overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.card{background:var(--card);border-radius:var(--r)}
-.pill{display:inline-block;background:#fff;border-radius:99px;padding:4px 14px;font-size:12px;font-weight:600}
-.btn{display:inline-block;background:var(--ink);color:#fff;border-radius:99px;padding:10px 22px;font-size:14px;font-weight:600;border:0;cursor:pointer}
-.circ{width:34px;height:34px;border-radius:50%;background:#fff;display:inline-grid;place-items:center;font-size:12px;font-weight:600}
-.head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;padding-bottom:14px;border-bottom:1px solid rgba(16,17,20,.35);margin-bottom:8px}
-
-/* nav */
-header{padding:18px 0}
-header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
-.links{display:flex;gap:22px;font-size:12px;font-weight:500}
-.logo{font-weight:600;font-size:18px;letter-spacing:-.02em}
-.right{display:flex;gap:8px;justify-content:flex-end;align-items:center}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+section{padding:clamp(64px,9vw,130px) 0}
+h1,h2{font-weight:300;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02}
+h2{font-size:clamp(26px,3.4vw,46px)}
+.sm{font-size:11px;text-transform:uppercase;letter-spacing:.04em;line-height:1.5;color:var(--mut)}
+.dots{display:inline-block;width:6px;height:6px;background:currentColor;box-shadow:10px 0 currentColor;margin-right:20px;vertical-align:middle}
+.sq{display:inline-block;width:6px;height:6px;background:var(--ink)}
+.br{font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:3px 5px;margin:-3px -5px;transition:background .25s,color .25s}
+.br::before{content:"[ "}.br::after{content:" ]"}
+.br:hover,.br:focus-visible{background:var(--ink);color:#000}
+.ph{background:radial-gradient(#34373a 1px,transparent 1.6px) 0 0/8px 8px,#111213}
+@keyframes float{50%{translate:0 -14px}}
+.fl{animation:float 6s ease-in-out infinite}
 
 /* hero */
-.stage{--mx:0;--my:0;position:relative;height:clamp(380px,56vw,620px);text-align:center;overflow:hidden}
-.stage .ghost{font-size:clamp(90px,23vw,330px);position:absolute;inset:20px 0 auto;transform:translate(calc(var(--mx)*-30px),0);transition:transform .35s ease-out}
-.arch{position:absolute;left:50%;bottom:0;translate:-50% 0;transform:translate(calc(var(--mx)*-14px),calc(var(--my)*-8px));transition:transform .3s ease-out;width:clamp(210px,32vw,360px);height:clamp(320px,50vw,540px);border-radius:999px 999px 0 0;background:linear-gradient(180deg,#ff8a4a,var(--acc) 55%,#e02a05)}
-.script{position:absolute;left:0;right:0;top:42%;font:400 clamp(70px,14vw,170px)/1 "Mrs Saint Delafield",cursive;color:var(--vio);white-space:nowrap;transform:translate(calc(var(--mx)*26px),calc(var(--my)*10px));transition:transform .3s ease-out}
-.tag{position:absolute;background:#fff;border-radius:99px;padding:6px 18px;font-size:14px;font-weight:500;top:26%;transform:translate(calc(var(--mx)*44px),calc(var(--my)*26px));transition:transform .25s ease-out}
-.t1{left:56%;rotate:18deg;background:var(--ink);color:#fff}
-.t2{left:30%;rotate:-18deg;animation-duration:6.5s;animation-delay:-2s}
-.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-top:-70px;position:relative}
-.hero-row h1{font-size:clamp(38px,6.4vw,84px);margin-top:6px}
-.info{padding:20px 24px;max-width:340px;font-weight:500;display:flex;flex-direction:column;gap:14px;position:relative}
-.info a.m{font-size:14px;text-decoration:underline}
-.badge{position:absolute;right:16px;bottom:14px;width:64px;height:64px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;font-size:9px;font-weight:600;text-transform:uppercase;line-height:1.1;padding:8px}
+.hero{--mx:0;--my:0;position:relative;min-height:clamp(620px,90vh,840px);overflow:hidden;background:radial-gradient(120% 90% at 42% 10%,#4b514f 0%,#171919 55%,#050505 100%)}
+.top{position:relative;z-index:3;text-align:center;padding-top:22px}
+.logo{font:600 clamp(28px,3vw,38px)/1 "Barlow Condensed",sans-serif}
+.links{display:flex;gap:28px;justify-content:center;align-items:center;margin-top:30px}
+.links a{font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:2px 4px;transition:background .25s,color .25s}
+.links a:hover{background:var(--ink);color:#000}
+.portrait{position:absolute;left:50%;bottom:0;translate:-50% 0;width:min(42vw,520px);height:90%;border-radius:50% 50% 0 0/26% 26% 0 0;background:radial-gradient(70% 45% at 50% 24%,#747a78 0%,rgba(52,56,55,.9) 55%,rgba(20,22,22,0) 100%);transform:translate(calc(var(--mx)*-16px),calc(var(--my)*-8px));transition:transform .3s ease-out}
+.h-left,.h-right,.hero .sm{position:absolute;z-index:2;transition:transform .3s ease-out}
+.h-left{left:clamp(18px,4vw,56px);top:24%;font-size:clamp(36px,6.6vw,96px);transform:translate(calc(var(--mx)*18px),calc(var(--my)*10px))}
+.h-right{right:clamp(18px,4vw,56px);bottom:7%;text-align:right;font-size:clamp(30px,5.4vw,78px);color:rgba(242,241,237,.5);transform:translate(calc(var(--mx)*-26px),calc(var(--my)*-12px))}
+.hero .sm{max-width:240px}
+.s1{left:clamp(18px,4vw,56px);bottom:30%}.s2{left:clamp(18px,4vw,56px);bottom:7%;max-width:300px}.s3{right:clamp(18px,4vw,56px);top:48%;text-align:right}
+.hero .fl.dots{position:absolute;z-index:2;transform:translate(calc(var(--mx)*var(--k)*1px),calc(var(--my)*var(--k)*1px))}
 
-/* services + faq accordions */
-details{background:#fff;border-radius:var(--r);padding:20px 26px;margin-bottom:12px}
-summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary h3{font-size:clamp(34px,5.4vw,60px)}
-summary b{font-size:36px;font-weight:300;line-height:1}
-summary b::before{content:"+"}
-details[open] summary b::before{content:"\2013"}
-details p{max-width:60ch;margin-top:14px;font-weight:500}
-.faq details{background:none;border-radius:0;border-bottom:1px solid rgba(16,17,20,.35);padding:18px 0;margin:0}
-.faq summary{font-size:13px;font-weight:600;text-transform:uppercase}
-.faq summary b{font-size:26px}
-.faq details p{font-size:13px;margin-top:10px}
+/* tapes */
+.tapes{position:relative;height:clamp(240px,32vw,400px);overflow:hidden;padding:0;background:#000}
+.tape{position:absolute;left:-12%;width:124%;height:36px;background:var(--tape);color:#111;display:flex;align-items:center;overflow:hidden;font-size:11px;text-transform:uppercase;letter-spacing:.06em;rotate:var(--r);animation:sway 7s ease-in-out infinite}
+@keyframes sway{50%{rotate:calc(var(--r) + 2deg)}}
+.track{display:flex;align-items:center;gap:26px;white-space:nowrap;width:max-content;animation:slide 32s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ta{--r:8deg;top:30%}.tb{--r:-8deg;top:38%;animation-delay:-3s}.tc{--r:0deg;top:64%;animation:none}
+.tb .track{animation-direction:reverse}
+.tapes:hover .track{animation-play-state:paused}
 
 /* about */
-.about{text-align:center}
-.about h2{font-size:clamp(28px,4.6vw,56px);max-width:18em;margin:18px auto 40px;line-height:1.08}
-.stats{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;text-align:left}
-.stats .col{display:grid;gap:40px}
-.stats .col:last-child{text-align:right}
-.stat b{display:block;font:400 clamp(48px,7vw,88px)/1 Anton,Impact,sans-serif}
-.stat span{font-size:13px;font-weight:500}
-.me{position:relative;width:clamp(200px,28vw,320px);aspect-ratio:1;border-radius:50%}
-.me .badge{right:6px;bottom:6px;width:76px;height:76px;background:#fff;color:var(--ink);font-size:10px}
+.split{display:grid;grid-template-columns:1fr 2fr;gap:clamp(24px,5vw,80px)}
+.about .left{display:flex;flex-direction:column;justify-content:flex-end;gap:22px;max-width:300px}
+.frames{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;margin-top:48px}
+.frame{position:relative;padding:4px;transition:translate .35s}
+.frame::before{content:"";position:absolute;inset:-3px;pointer-events:none;background:linear-gradient(#fff,#fff) 0 0/7px 7px no-repeat,linear-gradient(#fff,#fff) 100% 0/7px 7px no-repeat,linear-gradient(#fff,#fff) 0 100%/7px 7px no-repeat,linear-gradient(#fff,#fff) 100% 100%/7px 7px no-repeat}
+.frame .ph{aspect-ratio:1;transition:filter .3s}
+.frame:hover{translate:0 -8px}.frame:hover .ph{filter:brightness(1.6)}
+.frame p{margin-top:12px}
 
-/* work */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.work{position:relative;aspect-ratio:1/1;border-radius:var(--r)}
-.work .l{position:absolute;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;align-items:center}
-.work .circ{width:32px;height:32px}
+/* skills */
+.skills h2{margin-bottom:14px}
+.skills .intro{max-width:340px;margin-bottom:44px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{transition:scale .35s cubic-bezier(.2,.8,.2,1),opacity .35s;cursor:default}
+.card .ph{aspect-ratio:1;transition:filter .35s}
+.card p{margin-top:10px;transition:color .3s}
+.card:hover{scale:1.05;z-index:2}.card:hover .ph{filter:brightness(1.8)}.card:hover p{color:var(--ink)}
+.cards:has(.card:hover) .card:not(:hover){opacity:.3;scale:.97}
 
-/* feedback */
-.fb{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid rgba(16,17,20,.35)}
-.fb h3{font-family:Inter,sans-serif;text-transform:none;font-weight:600;font-size:clamp(22px,3.2vw,38px);line-height:1.15;letter-spacing:-.02em;max-width:22em}
-.fb small{display:block;margin-top:14px;font-size:12px;font-weight:500}
-.fb .ph{width:clamp(90px,12vw,150px);aspect-ratio:1;border-radius:50%}
-.clients{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.clients .card{aspect-ratio:1.2;display:grid;place-items:center;font-size:12px;color:#8a93a3;font-weight:500}
+/* tables */
+.tr{border-top:1px solid var(--line)}
+.tr>summary,a.tr{display:grid;grid-template-columns:1.1fr 1.1fr auto;gap:14px;padding:11px 8px;font-size:12px;text-transform:uppercase;letter-spacing:.03em;cursor:pointer;list-style:none;transition:background .25s,color .25s,padding .25s}
+.tr>summary::-webkit-details-marker{display:none}
+.tr .dots{opacity:0;translate:-12px 0;transition:.25s;margin-right:10px}
+.tr>summary:hover,a.tr:hover,.tr[open]>summary{background:var(--tape);color:#000}
+.tr>summary:hover .dots,a.tr:hover .dots,.tr[open]>summary .dots{opacity:1;translate:0 0}
+.tr p{padding:14px 8px 18px 8px;max-width:62ch;color:var(--mut)}
+.table{border-bottom:1px solid var(--line)}
+.sec2{padding-top:0}
 
 /* contact */
-.qa h2,.ct-title{text-align:center}
-.qa h2{font-size:clamp(30px,4vw,44px);margin-bottom:28px}
-.contact{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.contact .ph{border-radius:0;min-height:380px}
-form{padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;align-content:start}
-form h2{grid-column:1/-1;font-size:clamp(34px,4vw,48px)}
-form label{display:block;font-size:11px;font-weight:600}
+.contact h2{font-size:clamp(30px,4.4vw,64px);max-width:9em}
+.contact .cols{display:grid;grid-template-columns:repeat(3,auto);gap:12px 44px;justify-content:end;align-content:start}
+.contact .cols a{display:block;margin-bottom:12px;width:max-content}
+.mail{display:inline-block;font-size:clamp(20px,2.6vw,34px);margin:26px 0 10px;border-bottom:1px solid var(--line);transition:color .25s,border-color .25s}
+.mail:hover{color:#fff;border-color:#fff}
+form{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;max-width:640px}
 form .full{grid-column:1/-1}
-input,textarea{width:100%;border:0;border-bottom:1px solid #9aa2b0;padding:8px 0;font:inherit;font-size:13px;background:none;color:inherit;resize:vertical}
-input:focus,textarea:focus{outline:0;border-color:var(--vio)}
-form .btn{justify-self:start;grid-column:1/-1}
-footer{padding:40px 0 0;text-align:center;font-size:12px;overflow:hidden}
-footer .row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px}
-footer .ghost{font-size:clamp(60px,13vw,190px);height:.62em;line-height:1;margin-top:20px;white-space:nowrap}
+label{display:block}
+input,textarea{width:100%;background:none;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:inherit;font-size:14px;padding:8px 0;resize:vertical;transition:border-color .25s}
+input:focus,textarea:focus{outline:0;border-color:var(--ink)}
+button{justify-self:start;background:none;border:1px solid var(--ink);color:var(--ink);font:inherit;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:10px 20px;cursor:pointer;transition:background .25s,color .25s}
+button:hover{background:var(--ink);color:#000}
 
-/* motion */
-@keyframes float{50%{translate:0 -12px}}
-.tag{animation:float 5s ease-in-out infinite}
-.badge{animation:float 6s ease-in-out infinite}
-.about{position:relative}
-.orb{position:absolute;border-radius:50%;pointer-events:none;animation:float 7s ease-in-out infinite}
-.o1{width:72px;height:72px;background:var(--acc);left:3%;top:16%}
-.o2{width:112px;height:112px;border:14px solid var(--vio);right:3%;top:70%;animation-duration:9s}
-.work{transition:scale .35s cubic-bezier(.2,.8,.2,1),opacity .35s,filter .35s,box-shadow .35s}
-.work:hover,.work:focus-visible{scale:1.08;z-index:2;box-shadow:0 28px 60px rgba(16,17,20,.35)}
-.grid:has(.work:hover) .work:not(:hover),.grid:has(.work:focus-visible) .work:not(:focus-visible){scale:.94;opacity:.45;filter:saturate(.5)}
-.work .pill,.work .circ{transition:background .3s,color .3s,rotate .3s ease-out}
-.work:hover .pill{background:var(--ink);color:#fff}
-.work:hover .circ{rotate:45deg;background:var(--acc);color:#fff}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-@media(max-width:760px){.orb{display:none}}
+/* footer */
+footer{padding-top:30px;overflow:hidden}
+.giant{display:flex;justify-content:center;font:600 clamp(110px,27vw,400px)/.82 "Barlow Condensed",sans-serif;color:#2a2c2d;height:.72em;margin-top:30px;user-select:none}
+.giant span{display:inline-block;transition:rotate .35s,translate .35s,color .35s;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-.05em)}}
+.giant span:nth-child(odd){rotate:-7deg;translate:0 .05em}.giant span:nth-child(even){rotate:5deg}
+.giant span:nth-child(3n){animation-delay:-1.5s}.giant span:nth-child(3n+1){animation-delay:-3s}
+.giant span:hover{rotate:0deg;translate:0 -.08em;color:var(--ink)}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px}
+
 @media(max-width:760px){
- .links{display:none}
- header .wrap{grid-template-columns:auto 1fr}
- .stats{grid-template-columns:1fr 1fr}
- .me{grid-column:1/-1;grid-row:1;justify-self:center}
- .stats .col:last-child{text-align:left}
- .clients{grid-template-columns:repeat(2,1fr)}
- .contact{grid-template-columns:1fr}
- .contact .ph{min-height:260px}
- .t2{left:12%}.t1{left:62%}
- footer .row{justify-content:center}
+ .split{grid-template-columns:1fr}.frames{grid-template-columns:1fr}
+ .hero .sm.hm{display:none}.h-left{top:20%}.s1{bottom:34%}.s2{bottom:20%}
+ .h-right{bottom:4%}
+ .tr>summary,a.tr{grid-template-columns:1fr auto}.tr>summary span:nth-child(2),a.tr span:nth-child(2){grid-column:1/-1;order:3;color:var(--mut)}
+ .tr>summary:hover span:nth-child(2),a.tr:hover span:nth-child(2),.tr[open]>summary span:nth-child(2){color:#333}
+ .contact .cols{justify-content:start;margin-top:36px}
+ form{grid-template-columns:1fr}
 }
-@media(max-width:480px){.grid{grid-template-columns:1fr}.fb{grid-template-columns:1fr}.fb .ph{order:-1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
-<header>
- <div class="wrap">
-  <nav class="links" aria-label="Primary"><a href="#home">Home</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+<header class="hero" id="home">
+ <div class="top">
   <a class="logo" href="#home">doelynet</a>
-  <div class="right"><a class="circ" href="#" aria-label="Behance">Be</a><a class="circ" href="#" aria-label="LinkedIn">in</a><a class="circ" href="#" aria-label="X">X</a><a class="btn" href="#contact">Hire me</a></div>
+  <nav class="links" aria-label="Primary"><a href="#about">About</a><i class="sq"></i><a href="#experience">Experience</a><i class="sq"></i><a href="#contact">Contact</a></nav>
  </div>
+ <div class="portrait" role="img" aria-label="Portrait placeholder"><!-- <img src="images/portrait.jpg" alt="Portrait" style="width:100%;height:100%;object-fit:cover"> --></div>
+ <h1 class="h-left">Software engineer &amp;<br>solutions architect</h1>
+ <p class="sm s1 hm">Computer science graduate with AWS certification.</p>
+ <p class="sm s2">Working across IT support, film production and marketing, remotely from Nairobi, Kenya.</p>
+ <p class="sm s3 hm">Software engineer, solutions architect and SOC analyst.</p>
+ <p class="h-right">Curious,<br>organized,<br>detail-driven.</p>
+ <i class="dots fl" style="left:46%;top:44%;--k:30"></i>
+ <i class="dots fl" style="left:12%;top:60%;--k:-20;animation-delay:-2s"></i>
+ <i class="dots fl" style="right:22%;top:30%;--k:-40;animation-delay:-4s"></i>
 </header>
 
+<section class="tapes" aria-label="Highlights">
+ <div class="tape ta"><div class="track"><span>Curious, organized, detail-driven</span><i class="dots"></i><span>Software engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i></div></div>
+ <div class="tape tb"><div class="track"><span>Software engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i><span>Curious, organized, detail-driven</span><i class="dots"></i></div></div>
+ <div class="tape tc"><div class="track"><span>Nairobi, Kenya</span><i class="dots"></i><span>Open to remote work</span><i class="dots"></i><span>AWS Certified Cloud Practitioner</span><i class="dots"></i><span>BSc Computer Science</span><i class="dots"></i></div></div>
+</section>
+
 <main>
-<!-- Hero -->
-<section id="home" style="padding-top:20px">
+<section class="about" id="about">
  <div class="wrap">
-  <div class="stage">
-   <div class="ghost" aria-hidden="true">Designer</div>
-   <div class="arch ph" role="img" aria-label="Portrait placeholder"><!-- <img src="images/portrait.jpg" alt="Kiprono Yator"> --></div>
-   <span class="tag t2">Branding</span><span class="tag t1">Designer</span>
-   <p class="script" aria-hidden="true">Kiprono Yator</p>
-  </div>
-  <div class="hero-row">
+  <div class="split">
+   <div class="left"><i class="dots"></i><p class="sm">I follow guidelines closely, communicate clearly and work well remotely. I enjoy picking up new skills and combining them with the work in front of me.</p><a class="br" href="assets/cv.pdf" style="width:max-content">Download CV</a></div>
    <div>
-    <p style="font-weight:500">Hi, I’m Kiprono Yator</p>
-    <h1>Branding,<br>Product UI/UX<br>&amp; Design.</h1>
-   </div>
-   <div class="card info">
-    <p>A short line about your experience and where you’re based.</p>
-    <a class="m" href="mailto:you@example.com">you@example.com</a>
-    <a class="badge" href="#contact">Let’s talk</a>
+    <h2>Computer science graduate with AWS certification, drawing on IT support, film production and marketing.</h2>
+    <div class="frames">
+     <figure class="frame" data-depth="-.05"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm">AWS Certified Cloud Practitioner</p></figure>
+     <figure class="frame" data-depth=".07"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm">ALX Africa, AWS Solutions Architect programme</p></figure>
+    </div>
    </div>
   </div>
  </div>
 </section>
 
-<!-- Services -->
-<section id="services">
+<section class="skills" id="skills">
  <div class="wrap">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:-.5em"><div class="ghost" aria-hidden="true">Service</div><span class="pill" style="margin-bottom:.8em">Services</span></div>
-  <details open><summary><h3>Branding</h3><b></b></summary><p>Describe what you offer here: logos, identity systems, brand guidelines.</p></details>
-  <details><summary><h3>Design</h3><b></b></summary><p>Posters, print, social media and other graphic design work.</p></details>
-  <details><summary><h3>UI/UX</h3><b></b></summary><p>Wireframes, prototypes and interface design for web and mobile.</p></details>
-  <details><summary><h3>Marketing</h3><b></b></summary><p>Campaign visuals and assets that support your launch.</p></details>
+  <i class="dots"></i>
+  <h2>Skills</h2>
+  <p class="sm intro">The languages, systems and habits I bring to engineering, cloud and annotation work.</p>
+  <div class="cards">
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Python, Java, C++ or C#</p></div>
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Linux and Unix operating systems</p></div>
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Theoretical problem solving</p></div>
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Advanced prompt engineering and guardrail testing</p></div>
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Technical communication and annotation</p></div>
+   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Logistics and resource coordination</p></div>
+  </div>
  </div>
 </section>
 
-<!-- About -->
-<section class="about">
- <i class="orb o1" data-depth="-.12"></i><i class="orb o2" data-depth=".16"></i>
+<section class="sec2" id="experience">
+ <div class="wrap split">
+  <div><i class="dots"></i><h2>Experience &amp; education</h2></div>
+  <div class="table">
+   <details class="tr" open><summary><span><i class="dots"></i>Martial Labs / Elimika</span><span>Marketing Strategist (remote)</span><span>2023 – now</span></summary><p>Combined technical knowledge with market insight to position products clearly for target audiences such as high school graduates and transitioning professionals.</p></details>
+   <details class="tr"><summary><span><i class="dots"></i>Fingerprint Films Ltd</span><span>Production Assistant (part-time)</span><span>2024 – now</span></summary><p>Coordinated logistics for shoots, including crew movement, equipment, locations and schedules. Supported pre-production, production and post-production across TVC and film projects.</p></details>
+   <details class="tr"><summary><span><i class="dots"></i>Kenya Forest Service</span><span>IT Support (full-time)</span><span>2024</span></summary><p>Logged day-to-day user technical problems, diagnosed hardware and software faults, and documented solutions after resolving them.</p></details>
+   <details class="tr"><summary><span><i class="dots"></i>ALX Africa</span><span>AWS Solutions Architect programme</span><span>2024 – 25</span></summary><p>Cloud architecture training that led to the AWS Certified Cloud Practitioner credential.</p></details>
+   <details class="tr"><summary><span><i class="dots"></i>Riara University</span><span>BSc Computer Science</span><span>2022 – 26</span></summary><p>Bachelor of Science in Computer Science, September 2022 to June 2026.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="sec2" id="projects">
+ <div class="wrap split">
+  <div><i class="dots"></i><h2>Selected work</h2></div>
+  <div class="table">
+   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
+   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
+   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
+   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
  <div class="wrap">
-  <span class="pill">About me</span>
-  <h2>Designer crafting clear, user-friendly experiences through wireframing, prototyping and visual design.</h2>
-  <div class="stats">
-   <div class="col">
-    <div class="stat"><b>00</b><span>Years of experience</span></div>
-    <div class="stat"><b>00+</b><span>Total projects</span></div>
+  <div class="split">
+   <div>
+    <h2>Let’s work together</h2>
+    <a class="mail" href="mailto:lewisyator53@gmail.com">lewisyator53@gmail.com</a>
+    <p class="sm">Nairobi, Kenya. Available for remote work.</p>
+    <!-- Replace YOUR_FORM_ID with a free Formspree form ID so the form can send mail from a static site -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+     <label class="sm">Name<input name="name" required></label>
+     <label class="sm">Email<input name="email" type="email" required></label>
+     <label class="sm full">Message<textarea name="message" rows="3" required></textarea></label>
+     <button type="submit">Send message</button>
+    </form>
    </div>
-   <div class="me ph" role="img" aria-label="Photo placeholder"><a class="badge" href="#">Download my CV</a></div>
-   <div class="col">
-    <div class="stat"><b>0.0</b><span>Average rating</span></div>
-    <div class="stat"><b>00</b><span>Awards</span></div>
+   <div class="cols">
+    <div><a class="br" href="#home">Home</a><a class="br" href="#about">About</a><a class="br" href="#skills">Skills</a><a class="br" href="#experience">Experience</a><a class="br" href="#contact">Contact</a></div>
+    <div><a class="br" href="#skills">Software</a><a class="br" href="#skills">Cloud</a><a class="br" href="#experience">Marketing</a><a class="br" href="#skills">AI testing</a></div>
+    <div><a class="br" href="https://github.com/doelynet">GitHub</a><a class="br" href="#">LinkedIn</a><a class="br" href="#">X</a></div>
    </div>
-  </div>
- </div>
-</section>
-
-<!-- Work -->
-<section id="work">
- <div class="wrap">
-  <div class="ghost" aria-hidden="true" style="font-size:clamp(48px,11vw,150px);margin-bottom:-.4em">Latest portfolio</div>
-  <div class="grid">
-   <a class="work ph" href="#" aria-label="Project 1"><div class="l"><span class="pill">Project one</span><span class="circ">&#8599;</span></div></a>
-   <a class="work ph" href="#" aria-label="Project 2"><div class="l"><span class="pill">Project two</span><span class="circ">&#8599;</span></div></a>
-   <a class="work ph" href="#" aria-label="Project 3"><div class="l"><span class="pill">Project three</span><span class="circ">&#8599;</span></div></a>
-   <a class="work ph" href="#" aria-label="Project 4"><div class="l"><span class="pill">Project four</span><span class="circ">&#8599;</span></div></a>
-  </div>
- </div>
-</section>
-
-<!-- Feedback -->
-<section>
- <div class="wrap">
-  <div class="head"><span>Client feedback</span><a class="btn" href="#">Explore all</a></div>
-  <div class="fb"><div><h3>“Client testimonial goes here.”</h3><small>Client name<br>Role, Company</small></div><div class="ph" role="img" aria-label="Client photo placeholder"></div></div>
-  <div class="fb"><div><h3>“Another short testimonial goes here.”</h3><small>Client name<br>Role, Company</small></div><div class="ph" role="img" aria-label="Client photo placeholder"></div></div>
-  <div class="fb"><div><h3>“A third testimonial goes here.”</h3><small>Client name<br>Role, Company</small></div><div class="ph" role="img" aria-label="Client photo placeholder"></div></div>
- </div>
-</section>
-
-<!-- Clients -->
-<section style="padding-top:8px">
- <div class="wrap">
-  <div class="head" style="border:0;padding-bottom:6px"><span>Some of my clients</span><span>00+ clients</span></div>
-  <div class="clients"><div class="card">Logo</div><div class="card">Logo</div><div class="card">Logo</div><div class="card">Logo</div><div class="card">Logo</div></div>
- </div>
-</section>
-
-<!-- FAQ -->
-<section class="qa">
- <div class="wrap">
-  <h2>Questions &amp; answers</h2>
-  <div class="faq">
-   <details><summary>More about me?<b></b></summary><p>Add a short bio here.</p></details>
-   <details open><summary>How can I contact you?<b></b></summary><p>Use the form below or email you@example.com and I’ll reply as soon as I can.</p></details>
-   <details><summary>How much do you charge?<b></b></summary><p>Explain how you price projects.</p></details>
-   <details><summary>Which services do you provide?<b></b></summary><p>Branding, graphic design, UI/UX and marketing visuals.</p></details>
-  </div>
- </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
- <div class="wrap">
-  <div class="ghost ct-title" aria-hidden="true" style="margin-bottom:-.35em">Contact</div>
-  <div class="card contact">
-   <div class="ph" role="img" aria-label="Photo placeholder"></div>
-   <!-- Replace YOUR_FORM_ID with a free Formspree form ID (formspree.io) so the form can send email from a static site -->
-   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <h2>Let’s talk</h2>
-    <div><label for="n">Full name</label><input id="n" name="name" placeholder="Your name" required></div>
-    <div><label for="e">Email</label><input id="e" name="email" type="email" placeholder="Your email" required></div>
-    <div class="full"><label for="s">Subject</label><input id="s" name="subject" placeholder="Subject"></div>
-    <div class="full"><label for="m">Message</label><textarea id="m" name="message" rows="4" placeholder="Write your message" required></textarea></div>
-    <button class="btn" type="submit">Send message</button>
-   </form>
   </div>
  </div>
 </section>
 </main>
 
 <footer>
- <div class="wrap">
-  <a class="logo" href="#home">doelynet</a>
-  <div style="margin:12px 0"><a class="circ" href="#" aria-label="Behance">Be</a> <a class="circ" href="#" aria-label="LinkedIn">in</a> <a class="circ" href="#" aria-label="X">X</a></div>
-  <div class="row"><span>&copy; 2026 Kiprono Yator. All rights reserved.</span><span style="display:flex;gap:18px"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a></span></div>
-  <div class="ghost" aria-hidden="true">Kiprono Yator</div>
- </div>
+ <div class="wrap legal sm"><span>&copy; 2026 doelynet. All rights reserved.</span><a class="br" href="#home">Back to top</a></div>
+ <div class="giant" aria-hidden="true"><span>d</span><span>o</span><span>e</span><span>l</span><span>y</span><span>n</span><span>e</span><span>t</span></div>
 </footer>
 
 <script>
 (()=>{
+ document.querySelectorAll('.track').forEach(t=>{t.innerHTML=t.innerHTML.repeat(4);});
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const stage=document.querySelector('.stage');
- stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();
-  stage.style.setProperty('--mx',((e.clientX-r.left)/r.width*2-1).toFixed(3));
-  stage.style.setProperty('--my',((e.clientY-r.top)/r.height*2-1).toFixed(3));});
- stage.addEventListener('pointerleave',()=>{stage.style.setProperty('--mx',0);stage.style.setProperty('--my',0);});
- document.querySelectorAll('.work:nth-child(even)').forEach(el=>el.dataset.depth='.06');
- const drift=[...document.querySelectorAll('main > section:not(#home) .ghost')];
- const depth=[...document.querySelectorAll('[data-depth]')];
+ const hero=document.querySelector('.hero');
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();
+  hero.style.setProperty('--mx',((e.clientX-r.left)/r.width*2-1).toFixed(3));
+  hero.style.setProperty('--my',((e.clientY-r.top)/r.height*2-1).toFixed(3));});
+ hero.addEventListener('pointerleave',()=>{hero.style.setProperty('--mx',0);hero.style.setProperty('--my',0);});
+ const items=[...document.querySelectorAll('[data-depth]')];
  let busy=false;
  function tick(){busy=false;const vh=innerHeight;
-  drift.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;
-   el.style.transform='translateX('+(((r.top+r.height/2-vh/2)/vh)*-70).toFixed(1)+'px)';});
-  depth.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<-300||r.top>vh+300)return;
+  items.forEach(el=>{const r=el.getBoundingClientRect();if(r.bottom<-300||r.top>vh+300)return;
    el.style.transform='translateY('+((r.top+r.height/2-vh/2)*el.dataset.depth).toFixed(1)+'px)';});}
  addEventListener('scroll',()=>{if(!busy){busy=true;requestAnimationFrame(tick);}},{passive:true});
- addEventListener('resize',tick);tick();
+ tick();
 })();
 </script>
 </body>
