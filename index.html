@@ -7,12 +7,12 @@
 <meta name="description" content="Portfolio of a software engineer, solutions architect and SOC analyst based in Nairobi, Kenya.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#050505;--ink:#f2f1ed;--mut:#a9adb0;--tape:#d9d6cf;--line:rgba(242,241,237,.28)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:300 15px/1.5 "Inter Tight",Helvetica,Arial,sans-serif;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:300 15px/1.5 "Space Grotesk",Helvetica,Arial,sans-serif;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{max-width:1360px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
@@ -25,20 +25,22 @@ h2{font-size:clamp(26px,3.4vw,46px)}
 .br{font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:3px 5px;margin:-3px -5px;transition:background .25s,color .25s}
 .br::before{content:"[ "}.br::after{content:" ]"}
 .br:hover,.br:focus-visible{background:var(--ink);color:#000}
-.ph{background:radial-gradient(#34373a 1px,transparent 1.6px) 0 0/8px 8px,#111213}
 @keyframes float{50%{translate:0 -14px}}
 .fl{animation:float 6s ease-in-out infinite}
 
 /* hero */
 .hero{--mx:0;--my:0;position:relative;min-height:clamp(620px,90vh,840px);overflow:hidden;background:radial-gradient(120% 90% at 42% 10%,#4b514f 0%,#171919 55%,#050505 100%)}
 .top{position:relative;z-index:3;text-align:center;padding-top:22px}
-.logo{font:600 clamp(28px,3vw,38px)/1 "Barlow Condensed",sans-serif}
-.links{display:flex;gap:28px;justify-content:center;align-items:center;margin-top:30px}
+.logo{display:inline-flex;align-items:center;gap:5px;font:700 clamp(23px,2.4vw,31px)/1 "Space Grotesk",sans-serif;letter-spacing:-.04em}
+.logo::after{content:"";width:6px;height:6px;background:#48f69a}
+.links{display:flex;gap:clamp(7px,2vw,28px);justify-content:center;align-items:center;margin-top:30px}
 .links a{font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:2px 4px;transition:background .25s,color .25s}
 .links a:hover{background:var(--ink);color:#000}
 .portrait{position:absolute;left:50%;bottom:0;translate:-50% 0;width:min(42vw,520px);height:90%;border-radius:50% 50% 0 0/26% 26% 0 0;background:radial-gradient(70% 45% at 50% 24%,#747a78 0%,rgba(52,56,55,.9) 55%,rgba(20,22,22,0) 100%);transform:translate(calc(var(--mx)*-16px),calc(var(--my)*-8px));transition:transform .3s ease-out}
+.portrait img{position:absolute;left:50%;bottom:-24px;width:min(42vw,420px);height:auto;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 14px 28px rgba(0,0,0,.4))}
 .h-left,.h-right,.hero .sm{position:absolute;z-index:2;transition:transform .3s ease-out}
-.h-left{left:clamp(18px,4vw,56px);top:24%;font-size:clamp(36px,6.6vw,96px);transform:translate(calc(var(--mx)*18px),calc(var(--my)*10px))}
+.h-left{left:50%;top:24%;width:max-content;max-width:calc(100% - 36px);padding:clamp(14px,2vw,24px) clamp(18px,3vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:18px;background:rgba(8,12,11,.38);box-shadow:0 18px 55px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);text-align:center;font-size:clamp(25px,4.2vw,58px);font-weight:500;letter-spacing:-.045em;line-height:1.06;translate:-50% 0;animation:hero-float 5s ease-in-out infinite;transform:translate(calc(var(--mx)*18px),calc(var(--my)*10px))}
+@keyframes hero-float{50%{translate:-50% -7px}}
 .h-right{right:clamp(18px,4vw,56px);bottom:7%;text-align:right;font-size:clamp(30px,5.4vw,78px);color:rgba(242,241,237,.5);transform:translate(calc(var(--mx)*-26px),calc(var(--my)*-12px))}
 .hero .sm{max-width:240px}
 .s1{left:clamp(18px,4vw,56px);bottom:30%}.s2{left:clamp(18px,4vw,56px);bottom:7%;max-width:300px}.s3{right:clamp(18px,4vw,56px);top:48%;text-align:right}
@@ -60,18 +62,21 @@ h2{font-size:clamp(26px,3.4vw,46px)}
 .frames{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;margin-top:48px}
 .frame{position:relative;padding:4px;transition:translate .35s}
 .frame::before{content:"";position:absolute;inset:-3px;pointer-events:none;background:linear-gradient(#fff,#fff) 0 0/7px 7px no-repeat,linear-gradient(#fff,#fff) 100% 0/7px 7px no-repeat,linear-gradient(#fff,#fff) 0 100%/7px 7px no-repeat,linear-gradient(#fff,#fff) 100% 100%/7px 7px no-repeat}
-.frame .ph{aspect-ratio:1;transition:filter .3s}
-.frame:hover{translate:0 -8px}.frame:hover .ph{filter:brightness(1.6)}
-.frame p{margin-top:12px}
+.cert-art{display:grid;aspect-ratio:1;place-items:center;overflow:hidden}
+.cert-art img{width:100%;height:100%;object-fit:contain;transition:filter .3s}
+.cert-art .solution-badge{transform:scale(1.5)}
+.frame:hover{translate:0 -8px}.frame:hover img{filter:brightness(1.08)}
+.frame figcaption{margin-top:12px}
 
 /* skills */
 .skills h2{margin-bottom:14px}
 .skills .intro{max-width:340px;margin-bottom:44px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
 .card{transition:scale .35s cubic-bezier(.2,.8,.2,1),opacity .35s;cursor:default}
-.card .ph{aspect-ratio:1;transition:filter .35s}
+.skill-image{display:grid;aspect-ratio:1;place-items:center;overflow:hidden}
+.skill-image img{width:100%;height:100%;object-fit:contain;transition:filter .35s}
 .card p{margin-top:10px;transition:color .3s}
-.card:hover{scale:1.05;z-index:2}.card:hover .ph{filter:brightness(1.8)}.card:hover p{color:var(--ink)}
+.card:hover{scale:1.05;z-index:2}.card:hover .skill-image img{filter:brightness(1.12)}.card:hover p{color:var(--ink)}
 .cards:has(.card:hover) .card:not(:hover){opacity:.3;scale:.97}
 
 /* tables */
@@ -83,6 +88,7 @@ h2{font-size:clamp(26px,3.4vw,46px)}
 .tr>summary:hover .dots,a.tr:hover .dots,.tr[open]>summary .dots{opacity:1;translate:0 0}
 .tr p{padding:14px 8px 18px 8px;max-width:62ch;color:var(--mut)}
 .table{border-bottom:1px solid var(--line)}
+.project-row{display:grid;grid-template-columns:1.1fr 1.1fr auto;gap:14px;padding:11px 8px;border-top:1px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
 .sec2{padding-top:0}
 
 /* contact */
@@ -101,7 +107,7 @@ button:hover{background:var(--ink);color:#000}
 
 /* footer */
 footer{padding-top:30px;overflow:hidden}
-.giant{display:flex;justify-content:center;font:600 clamp(110px,27vw,400px)/.82 "Barlow Condensed",sans-serif;color:#2a2c2d;height:.72em;margin-top:30px;user-select:none}
+.giant{display:flex;justify-content:center;font:600 clamp(110px,27vw,400px)/.82 "Space Grotesk",sans-serif;color:#2a2c2d;height:.72em;margin-top:30px;user-select:none}
 .giant span{display:inline-block;transition:rotate .35s,translate .35s,color .35s;animation:bob 5s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-.05em)}}
 .giant span:nth-child(odd){rotate:-7deg;translate:0 .05em}.giant span:nth-child(even){rotate:5deg}
@@ -111,9 +117,12 @@ footer{padding-top:30px;overflow:hidden}
 
 @media(max-width:760px){
  .split{grid-template-columns:1fr}.frames{grid-template-columns:1fr}
- .hero .sm.hm{display:none}.h-left{top:20%}.s1{bottom:34%}.s2{bottom:20%}
+ .links{gap:4px;flex-wrap:wrap;padding:0 12px}.links a{font-size:9px;letter-spacing:0}.links .sq{display:none}
+ .hero .sm.hm{display:none}.h-left{top:20%;width:calc(100% - 36px);font-size:clamp(23px,6.2vw,32px);border-radius:14px}.s1{bottom:34%}.s2{bottom:20%}
+ .portrait{width:min(78vw,360px);height:75%}.portrait img{bottom:180px;width:min(64vw,260px)}
  .h-right{bottom:4%}
  .tr>summary,a.tr{grid-template-columns:1fr auto}.tr>summary span:nth-child(2),a.tr span:nth-child(2){grid-column:1/-1;order:3;color:var(--mut)}
+ .project-row{grid-template-columns:1fr auto}.project-row span:nth-child(2){grid-column:1/-1;order:3;color:var(--mut)}
  .tr>summary:hover span:nth-child(2),a.tr:hover span:nth-child(2),.tr[open]>summary span:nth-child(2){color:#333}
  .contact .cols{justify-content:start;margin-top:36px}
  form{grid-template-columns:1fr}
@@ -126,35 +135,35 @@ footer{padding-top:30px;overflow:hidden}
 <header class="hero" id="home">
  <div class="top">
   <a class="logo" href="#home">doelynet</a>
-  <nav class="links" aria-label="Primary"><a href="#about">About</a><i class="sq"></i><a href="#experience">Experience</a><i class="sq"></i><a href="#contact">Contact</a></nav>
+  <nav class="links" aria-label="Primary"><a href="#about">About</a><i class="sq"></i><a href="#skills">Skills</a><i class="sq"></i><a href="#projects">Projects</a><i class="sq"></i><a href="#film-marketing">Film &amp; Marketing</a><i class="sq"></i><a href="#experience">Experience</a><i class="sq"></i><a href="#contact">Contact</a></nav>
  </div>
- <div class="portrait" role="img" aria-label="Portrait placeholder"><!-- <img src="images/portrait.jpg" alt="Portrait" style="width:100%;height:100%;object-fit:cover"> --></div>
- <h1 class="h-left">Software engineer &amp;<br>solutions architect</h1>
- <p class="sm s1 hm">Computer science graduate with AWS certification.</p>
- <p class="sm s2">Working across IT support, film production and marketing, remotely from Nairobi, Kenya.</p>
- <p class="sm s3 hm">Software engineer, solutions architect and SOC analyst.</p>
- <p class="h-right">Curious,<br>organized,<br>detail-driven.</p>
+ <div class="portrait"><img src="imgs/hero2.png" width="500" height="500" alt="Stylized doelynet mascot"></div>
+
+ <p class="sm s1 hm">Lewis Kiprono</p>
+ <p class="sm s2">Working across IT support, marketing and film production, remotely from Nairobi, Kenya.</p>
+ <p class="sm s3 hm">Security engineer, Solutions architect and SOC analyst.</p>
+ <p class="h-right">The<br>Doely<br>Foundation</p>
  <i class="dots fl" style="left:46%;top:44%;--k:30"></i>
  <i class="dots fl" style="left:12%;top:60%;--k:-20;animation-delay:-2s"></i>
  <i class="dots fl" style="right:22%;top:30%;--k:-40;animation-delay:-4s"></i>
 </header>
 
 <section class="tapes" aria-label="Highlights">
- <div class="tape ta"><div class="track"><span>Curious, organized, detail-driven</span><i class="dots"></i><span>Software engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i></div></div>
- <div class="tape tb"><div class="track"><span>Software engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i><span>Curious, organized, detail-driven</span><i class="dots"></i></div></div>
- <div class="tape tc"><div class="track"><span>Nairobi, Kenya</span><i class="dots"></i><span>Open to remote work</span><i class="dots"></i><span>AWS Certified Cloud Practitioner</span><i class="dots"></i><span>BSc Computer Science</span><i class="dots"></i></div></div>
+ <div class="tape ta"><div class="track"><span>Anonymity and Pseudonymity</span><i class="dots"></i><span>Security Engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i></div></div>
+ <div class="tape tb"><div class="track"><span>Security engineer</span><i class="dots"></i><span>Solutions architect</span><i class="dots"></i><span>SOC analyst</span><i class="dots"></i><span>The Doely Foundation</span><i class="dots"></i></div></div>
+ <div class="tape tc"><div class="track"><span>Nairobi, Kenya</span><i class="dots"></i><span>Freelancer</span><i class="dots"></i><span>AWS Certified Cloud Practitioner</span><i class="dots"></i><span>BSc Computer Science</span><i class="dots"></i></div></div>
 </section>
 
 <main>
 <section class="about" id="about">
  <div class="wrap">
   <div class="split">
-   <div class="left"><i class="dots"></i><p class="sm">I follow guidelines closely, communicate clearly and work well remotely. I enjoy picking up new skills and combining them with the work in front of me.</p><a class="br" href="assets/cv.pdf" style="width:max-content">Download CV</a></div>
+   <div class="left"><i class="dots"></i><p class="sm">Get to know - Lewis Kiprono</p><a class="br" href="docs/res.pdf" style="width:max-content">Download CV</a></div>
    <div>
-    <h2>Computer science graduate with AWS certification, drawing on IT support, film production and marketing.</h2>
+    <h2>AWS certification</h2>
     <div class="frames">
-     <figure class="frame" data-depth="-.05"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm">AWS Certified Cloud Practitioner</p></figure>
-     <figure class="frame" data-depth=".07"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm">ALX Africa, AWS Solutions Architect programme</p></figure>
+     <figure class="frame" data-depth="-.05"><div class="cert-art"><img src="imgs/awscp.png" width="512" height="512" alt="AWS Certified Cloud Practitioner badge"></div><figcaption class="sm">AWS Certified Cloud Practitioner</figcaption></figure>
+     <figure class="frame" data-depth=".07"><div class="cert-art"><img class="solution-badge" src="imgs/awsolu.png" width="500" height="500" alt="AWS Certified Solutions Architect Associate badge"></div><figcaption class="sm">AWS Certified Solutions Architect – Associate</figcaption></figure>
     </div>
    </div>
   </div>
@@ -165,14 +174,14 @@ footer{padding-top:30px;overflow:hidden}
  <div class="wrap">
   <i class="dots"></i>
   <h2>Skills</h2>
-  <p class="sm intro">The languages, systems and habits I bring to engineering, cloud and annotation work.</p>
+  <p class="sm intro">The languages, systems and habits I bring to engineering, cloud and annotation work. Original profile links to be confirmed — TBC.</p>
   <div class="cards">
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Python, Java, C++ or C#</p></div>
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Linux and Unix operating systems</p></div>
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Theoretical problem solving</p></div>
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Advanced prompt engineering and guardrail testing</p></div>
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Technical communication and annotation</p></div>
-   <div class="card"><div class="ph" role="img" aria-label="Image placeholder"></div><p class="sm"><i class="dots"></i>Logistics and resource coordination</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/python.png" width="500" height="500" alt="3D code symbol representing programming"></div><p class="sm"><i class="dots"></i>Python, Java, C++, and C#</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/linux.png" width="500" height="500" alt="Linux workstation illustration"></div><p class="sm"><i class="dots"></i>Linux and Unix systems</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/cloud.png" width="500" height="500" alt="Cloud computing illustration"></div><p class="sm"><i class="dots"></i>Cloud fundamentals and AWS concepts</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/troubleshooting.png" width="500" height="500" alt="Technician character inspecting diagnostics"></div><p class="sm"><i class="dots"></i>System troubleshooting and technical support</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/AI.png" width="408" height="612" alt="AI robot illustration"></div><p class="sm"><i class="dots"></i>Prompt engineering and guardrail testing</p></div>
+   <div class="card"><div class="skill-image"><img src="imgs/documentation.png" width="576" height="433" alt="Document folder illustration"></div><p class="sm"><i class="dots"></i>Documentation, annotation and technical communication</p></div>
   </div>
  </div>
 </section>
@@ -181,9 +190,7 @@ footer{padding-top:30px;overflow:hidden}
  <div class="wrap split">
   <div><i class="dots"></i><h2>Experience &amp; education</h2></div>
   <div class="table">
-   <details class="tr" open><summary><span><i class="dots"></i>Martial Labs / Elimika</span><span>Marketing Strategist (remote)</span><span>2023 – now</span></summary><p>Combined technical knowledge with market insight to position products clearly for target audiences such as high school graduates and transitioning professionals.</p></details>
-   <details class="tr"><summary><span><i class="dots"></i>Fingerprint Films Ltd</span><span>Production Assistant (part-time)</span><span>2024 – now</span></summary><p>Coordinated logistics for shoots, including crew movement, equipment, locations and schedules. Supported pre-production, production and post-production across TVC and film projects.</p></details>
-   <details class="tr"><summary><span><i class="dots"></i>Kenya Forest Service</span><span>IT Support (full-time)</span><span>2024</span></summary><p>Logged day-to-day user technical problems, diagnosed hardware and software faults, and documented solutions after resolving them.</p></details>
+   <details class="tr" open><summary><span><i class="dots"></i>Kenya Forest Service</span><span>IT Support (full-time)</span><span>2024</span></summary><p>Logged day-to-day user technical problems, diagnosed hardware and software faults, and documented solutions after resolving them.</p></details>
    <details class="tr"><summary><span><i class="dots"></i>ALX Africa</span><span>AWS Solutions Architect programme</span><span>2024 – 25</span></summary><p>Cloud architecture training that led to the AWS Certified Cloud Practitioner credential.</p></details>
    <details class="tr"><summary><span><i class="dots"></i>Riara University</span><span>BSc Computer Science</span><span>2022 – 26</span></summary><p>Bachelor of Science in Computer Science, September 2022 to June 2026.</p></details>
   </div>
@@ -192,12 +199,21 @@ footer{padding-top:30px;overflow:hidden}
 
 <section class="sec2" id="projects">
  <div class="wrap split">
-  <div><i class="dots"></i><h2>Selected work</h2></div>
+  <div><i class="dots"></i><h2>Personal projects</h2><p class="sm" style="margin-top:18px">Project details and links will be added later.</p></div>
   <div class="table">
-   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
-   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
-   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
-   <a class="tr" href="#"><span><i class="dots"></i>Project name</span><span>Category</span><span>Year</span></a>
+   <div class="project-row"><span><i class="dots"></i>Project 01</span><span>Details to be added</span><span>TBC</span></div>
+   <div class="project-row"><span><i class="dots"></i>Project 02</span><span>Details to be added</span><span>TBC</span></div>
+   <div class="project-row"><span><i class="dots"></i>Project 03</span><span>Details to be added</span><span>TBC</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec2" id="film-marketing">
+ <div class="wrap split">
+  <div><i class="dots"></i><h2>Film production &amp; marketing</h2><p class="sm" style="margin-top:18px">Creative work across production coordination and product marketing.</p></div>
+  <div class="table">
+   <details class="tr" open><summary><span><i class="dots"></i>Fingerprint Films Ltd</span><span>Production Assistant (part-time)</span><span>2024 – now</span></summary><p>Coordinated logistics for shoots, including crew movement, equipment, locations and schedules. Supported pre-production, production and post-production across TVC and film projects.</p></details>
+   <details class="tr"><summary><span><i class="dots"></i>Martial Labs / Elimika</span><span>Marketing Strategist (remote)</span><span>2023 – now</span></summary><p>Combined technical knowledge with market insight to position products clearly for target audiences such as high school graduates and transitioning professionals.</p></details>
   </div>
  </div>
 </section>
@@ -218,8 +234,8 @@ footer{padding-top:30px;overflow:hidden}
     </form>
    </div>
    <div class="cols">
-    <div><a class="br" href="#home">Home</a><a class="br" href="#about">About</a><a class="br" href="#skills">Skills</a><a class="br" href="#experience">Experience</a><a class="br" href="#contact">Contact</a></div>
-    <div><a class="br" href="#skills">Software</a><a class="br" href="#skills">Cloud</a><a class="br" href="#experience">Marketing</a><a class="br" href="#skills">AI testing</a></div>
+    <div><a class="br" href="#home">Home</a><a class="br" href="#about">About</a><a class="br" href="#skills">Skills</a><a class="br" href="#projects">Personal Projects</a><a class="br" href="#film-marketing">Film &amp; Marketing</a><a class="br" href="#experience">Experience</a><a class="br" href="#contact">Contact</a></div>
+    <div><a class="br" href="#skills">Software</a><a class="br" href="#skills">Cloud</a><a class="br" href="#film-marketing">Marketing</a><a class="br" href="#skills">AI testing</a></div>
     <div><a class="br" href="https://github.com/doelynet">GitHub</a><a class="br" href="#">LinkedIn</a><a class="br" href="#">X</a></div>
    </div>
   </div>
