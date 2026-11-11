@@ -88,13 +88,42 @@ h2{font-size:clamp(26px,3.4vw,46px)}
 .tr>summary:hover .dots,a.tr:hover .dots,.tr[open]>summary .dots{opacity:1;translate:0 0}
 .tr p{padding:14px 8px 18px 8px;max-width:62ch;color:var(--mut)}
 .table{border-bottom:1px solid var(--line)}
-.project-row{display:grid;grid-template-columns:1.1fr 1.1fr auto;gap:14px;padding:11px 8px;border-top:1px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
 .sec2{padding-top:0}
+.project-nav{margin:28px 0 50px}
+.carousel-stage{position:relative;display:grid;place-items:center;height:clamp(300px,38vw,460px);overflow:hidden;perspective:1200px;touch-action:pan-y;user-select:none}
+.project-link{position:absolute;left:50%;top:50%;width:clamp(235px,38vw,420px);padding:9px;border:1px solid rgba(242,241,237,.45);background:linear-gradient(135deg,#d9d6cf,#777872 30%,#222422 68%,#aaa99f);color:var(--ink);font:inherit;text-align:left;cursor:pointer;box-shadow:0 24px 55px rgba(0,0,0,.5);transform:translate(-50%,-50%) translateX(var(--offset-x,0%)) translateZ(var(--depth-z,0px)) rotateY(var(--rotation,0deg)) scale(var(--scale,1));opacity:var(--opacity,1);z-index:var(--layer,1);transition:transform .65s cubic-bezier(.2,.8,.2,1),opacity .4s,box-shadow .4s,filter .4s;filter:brightness(var(--brightness,1))}
+.project-link[data-active="true"]{box-shadow:0 30px 70px rgba(0,0,0,.7),0 0 0 1px rgba(242,241,237,.18)}
+.project-link:not([data-active="true"]):hover{filter:brightness(1.12)}
+.project-art{position:relative;display:flex;aspect-ratio:1.28;flex-direction:column;justify-content:space-between;overflow:hidden;padding:clamp(14px,2vw,24px);background:#101312;color:var(--ink)}
+.project-art::before,.project-art::after{content:"";position:absolute;pointer-events:none}
+.project-art strong{position:relative;z-index:1;align-self:flex-start;font-size:clamp(26px,4vw,54px);font-weight:500;line-height:.95;letter-spacing:-.06em;text-transform:uppercase}
+.project-art .sm{position:relative;z-index:1;color:rgba(242,241,237,.72);font-size:9px}
+.project-art--film{background:radial-gradient(ellipse at 75% 25%,#8d6035 0,#383124 20%,#111312 72%)}
+.project-art--film::before{inset:10% 12%;border:1px solid rgba(242,241,237,.3);background:repeating-linear-gradient(0deg,transparent 0 14px,rgba(242,241,237,.08) 14px 15px)}
+.project-art--film::after{width:24%;height:18%;right:15%;top:20%;border:1px solid rgba(242,241,237,.55);background:linear-gradient(135deg,transparent 45%,rgba(72,246,154,.65) 46% 52%,transparent 53%)}
+.project-art--marketing{background:radial-gradient(ellipse at 75% 24%,#6f7a58 0,#31372b 30%,#111312 72%)}
+.project-art--marketing::before{width:55%;aspect-ratio:1;right:-8%;top:16%;border:1px solid rgba(242,241,237,.5);border-radius:50%;box-shadow:0 0 0 12px rgba(242,241,237,.06),0 0 0 24px rgba(242,241,237,.04)}
+.project-art--marketing::after{width:35%;height:1px;right:9%;top:50%;rotate:-35deg;background:#48f69a;box-shadow:0 0 14px #48f69a}
+.project-art--software{align-items:flex-start;background:radial-gradient(ellipse at 75% 30%,#344859 0,#18232b 40%,#101312 76%)}
+.project-art--software img{position:absolute;right:7%;top:10%;width:48%;height:80%;object-fit:contain;opacity:.8}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:clamp(18px,4vw,42px);margin-top:4px}
+.carousel-arrow{display:grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-family:inherit;font-size:24px;font-weight:300;line-height:1;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.carousel-arrow:hover{background:var(--ink);color:#000;transform:scale(1.06)}
+.carousel-status{min-width:180px;text-align:center}
+.carousel-count{display:block;color:var(--ink);font-size:11px;letter-spacing:.1em}
+.carousel-name{display:block;margin-top:3px;color:var(--mut);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.project-categories{display:grid;gap:clamp(28px,5vw,56px)}
+.project-categories[hidden],.project-category[hidden]{display:none}
+.project-category{border-top:1px solid var(--line);padding-top:16px;scroll-margin-top:24px}
+.project-category h3{font-size:clamp(18px,2vw,26px);font-weight:400;text-transform:uppercase;letter-spacing:-.02em}
+.project-category>p{margin-top:12px}
+.project-category .table{margin-top:24px}
 
 /* contact */
 .contact h2{font-size:clamp(30px,4.4vw,64px);max-width:9em}
 .contact .cols{display:grid;grid-template-columns:repeat(3,auto);gap:12px 44px;justify-content:end;align-content:start}
 .contact .cols a{display:block;margin-bottom:12px;width:max-content}
+.contact .cols button.br{display:block;width:max-content;margin:0 0 12px;padding:3px 5px;border:0;background:none;color:inherit;font:inherit;font-size:11px;text-align:left;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
 .mail{display:inline-block;font-size:clamp(20px,2.6vw,34px);margin:26px 0 10px;border-bottom:1px solid var(--line);transition:color .25s,border-color .25s}
 .mail:hover{color:#fff;border-color:#fff}
 form{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;max-width:640px}
@@ -122,7 +151,10 @@ footer{padding-top:30px;overflow:hidden}
  .portrait{width:min(78vw,360px);height:75%}.portrait img{bottom:180px;width:min(64vw,260px)}
  .h-right{bottom:4%}
  .tr>summary,a.tr{grid-template-columns:1fr auto}.tr>summary span:nth-child(2),a.tr span:nth-child(2){grid-column:1/-1;order:3;color:var(--mut)}
- .project-row{grid-template-columns:1fr auto}.project-row span:nth-child(2){grid-column:1/-1;order:3;color:var(--mut)}
+ .project-nav{margin:20px 0 38px}
+ .carousel-stage{height:clamp(260px,78vw,360px)}
+ .project-link{width:min(72vw,330px)}
+ .carousel-controls{gap:20px}
  .tr>summary:hover span:nth-child(2),a.tr:hover span:nth-child(2),.tr[open]>summary span:nth-child(2){color:#333}
  .contact .cols{justify-content:start;margin-top:36px}
  form{grid-template-columns:1fr}
@@ -135,7 +167,7 @@ footer{padding-top:30px;overflow:hidden}
 <header class="hero" id="home">
  <div class="top">
   <a class="logo" href="#home">doelynet</a>
-  <nav class="links" aria-label="Primary"><a href="#about">About</a><i class="sq"></i><a href="#skills">Skills</a><i class="sq"></i><a href="#projects">Projects</a><i class="sq"></i><a href="#film-marketing">Film &amp; Marketing</a><i class="sq"></i><a href="#experience">Experience</a><i class="sq"></i><a href="#contact">Contact</a></nav>
+  <nav class="links" aria-label="Primary"><a href="#about">About</a><i class="sq"></i><a href="#skills">Skills</a><i class="sq"></i><a href="#projects">Projects</a><i class="sq"></i><a href="marketplace.html">Marketplace</a><i class="sq"></i><a href="#experience">Experience</a><i class="sq"></i><a href="#contact">Contact</a></nav>
  </div>
  <div class="portrait"><img src="imgs/hero2.png" width="500" height="500" alt="Stylized doelynet mascot"></div>
 
@@ -198,22 +230,46 @@ footer{padding-top:30px;overflow:hidden}
 </section>
 
 <section class="sec2" id="projects">
- <div class="wrap split">
-  <div><i class="dots"></i><h2>Personal projects</h2><p class="sm" style="margin-top:18px">Project details and links will be added later.</p></div>
-  <div class="table">
-   <div class="project-row"><span><i class="dots"></i>Project 01</span><span>Details to be added</span><span>TBC</span></div>
-   <div class="project-row"><span><i class="dots"></i>Project 02</span><span>Details to be added</span><span>TBC</span></div>
-   <div class="project-row"><span><i class="dots"></i>Project 03</span><span>Details to be added</span><span>TBC</span></div>
+ <div class="wrap">
+  <i class="dots"></i>
+  <h2>Projects</h2>
+  <div class="project-nav">
+   <div class="carousel-stage" role="group" aria-label="Interactive project carousel" tabindex="0">
+    <button class="project-link" type="button" data-project-toggle="film-projects" aria-controls="film-projects" aria-expanded="false" aria-label="View film projects">
+     <div class="project-art project-art--film"><span class="sm">DOELYNET / 01</span><strong>Film<br>work</strong><span class="sm">Production · On-set</span></div>
+    </button>
+    <button class="project-link" type="button" data-project-toggle="marketing-projects" aria-controls="marketing-projects" aria-expanded="false" aria-label="View marketing projects">
+     <div class="project-art project-art--marketing"><span class="sm">DOELYNET / 02</span><strong>Market<br>ideas</strong><span class="sm">Strategy · Positioning</span></div>
+    </button>
+    <button class="project-link" type="button" data-project-toggle="software-projects" aria-controls="software-projects" aria-expanded="false" aria-label="View software projects">
+     <div class="project-art project-art--software"><img src="imgs/python.png" width="500" height="500" alt=""><span class="sm">DOELYNET / 03</span><strong>Software<br>builds</strong><span class="sm">Code · Cloud · Systems</span></div>
+    </button>
+   </div>
+   <div class="carousel-controls" role="group" aria-label="Carousel controls">
+    <button class="carousel-arrow" type="button" data-carousel-step="-1" aria-label="Previous project category">‹</button>
+    <p class="carousel-status" aria-live="polite"><span class="carousel-count">01 / 03</span><span class="carousel-name">Film projects</span></p>
+    <button class="carousel-arrow" type="button" data-carousel-step="1" aria-label="Next project category">›</button>
+   </div>
   </div>
- </div>
-</section>
-
-<section class="sec2" id="film-marketing">
- <div class="wrap split">
-  <div><i class="dots"></i><h2>Film production &amp; marketing</h2><p class="sm" style="margin-top:18px">Creative work across production coordination and product marketing.</p></div>
-  <div class="table">
-   <details class="tr" open><summary><span><i class="dots"></i>Fingerprint Films Ltd</span><span>Production Assistant (part-time)</span><span>2024 – now</span></summary><p>Coordinated logistics for shoots, including crew movement, equipment, locations and schedules. Supported pre-production, production and post-production across TVC and film projects.</p></details>
-   <details class="tr"><summary><span><i class="dots"></i>Martial Labs / Elimika</span><span>Marketing Strategist (remote)</span><span>2023 – now</span></summary><p>Combined technical knowledge with market insight to position products clearly for target audiences such as high school graduates and transitioning professionals.</p></details>
+  <div class="project-categories" hidden>
+   <article class="project-category" id="film-projects" hidden>
+    <h3>Film projects</h3>
+    <p class="sm">Production coordination and on-set support.</p>
+    <div class="table">
+     <details class="tr" open><summary><span><i class="dots"></i>Fingerprint Films Ltd</span><span>Production Assistant (part-time)</span><span>2024 – now</span></summary><p>Coordinated logistics for shoots, including crew movement, equipment, locations and schedules. Supported pre-production, production and post-production across TVC and film projects.</p></details>
+    </div>
+   </article>
+   <article class="project-category" id="marketing-projects" hidden>
+    <h3>Marketing projects</h3>
+    <p class="sm">Product positioning informed by technical and market insight.</p>
+    <div class="table">
+     <details class="tr"><summary><span><i class="dots"></i>Martial Labs / Elimika</span><span>Marketing Strategist (remote)</span><span>2023 – now</span></summary><p>Combined technical knowledge with market insight to position products clearly for target audiences such as high school graduates and transitioning professionals.</p></details>
+    </div>
+   </article>
+   <article class="project-category" id="software-projects" hidden>
+    <h3>Software projects</h3>
+    <p class="sm">Software project details and links will be added here.</p>
+   </article>
   </div>
  </div>
 </section>
@@ -234,8 +290,8 @@ footer{padding-top:30px;overflow:hidden}
     </form>
    </div>
    <div class="cols">
-    <div><a class="br" href="#home">Home</a><a class="br" href="#about">About</a><a class="br" href="#skills">Skills</a><a class="br" href="#projects">Personal Projects</a><a class="br" href="#film-marketing">Film &amp; Marketing</a><a class="br" href="#experience">Experience</a><a class="br" href="#contact">Contact</a></div>
-    <div><a class="br" href="#skills">Software</a><a class="br" href="#skills">Cloud</a><a class="br" href="#film-marketing">Marketing</a><a class="br" href="#skills">AI testing</a></div>
+    <div><a class="br" href="#home">Home</a><a class="br" href="marketplace.html">Marketplace</a><a class="br" href="#about">About</a><a class="br" href="#skills">Skills</a><a class="br" href="#projects">Projects</a><a class="br" href="#experience">Experience</a><a class="br" href="#contact">Contact</a></div>
+    <div><button class="br" type="button" data-project-toggle="software-projects" aria-controls="software-projects" aria-expanded="false">Software projects</button><button class="br" type="button" data-project-toggle="film-projects" aria-controls="film-projects" aria-expanded="false">Film projects</button><button class="br" type="button" data-project-toggle="marketing-projects" aria-controls="marketing-projects" aria-expanded="false">Marketing projects</button><a class="br" href="#skills">Cloud</a><a class="br" href="#skills">AI testing</a></div>
     <div><a class="br" href="https://github.com/doelynet">GitHub</a><a class="br" href="#">LinkedIn</a><a class="br" href="#">X</a></div>
    </div>
   </div>
@@ -251,6 +307,80 @@ footer{padding-top:30px;overflow:hidden}
 <script>
 (()=>{
  document.querySelectorAll('.track').forEach(t=>{t.innerHTML=t.innerHTML.repeat(4);});
+ const projectPanel=document.querySelector('.project-categories');
+ const projectToggles=[...document.querySelectorAll('[data-project-toggle]')];
+ const projectCards=[...document.querySelectorAll('.project-link')];
+ const projectNames=['Film projects','Marketing projects','Software projects'];
+ const carouselStatus=document.querySelector('.carousel-status');
+ let activeProject=0;
+ let openedProject=null;
+ let ignoreCardClickUntil=0;
+ function renderProjects(){
+  projectCards.forEach((card,index)=>{
+   let offset=index-activeProject;
+   if(offset>1)offset-=projectCards.length;
+   if(offset<-1)offset+=projectCards.length;
+   const distance=Math.abs(offset);
+   card.style.setProperty('--offset-x',`${offset*82}%`);
+   card.style.setProperty('--depth-z',`${distance*-170}px`);
+   card.style.setProperty('--rotation',`${offset*-27}deg`);
+   card.style.setProperty('--scale',distance===0?'1':'.82');
+   card.style.setProperty('--opacity',distance===0?'1':'.72');
+   card.style.setProperty('--brightness',distance===0?'1':'.7');
+   card.style.setProperty('--layer',String(3-distance));
+   card.dataset.active=String(distance===0);
+   card.setAttribute('aria-pressed',String(openedProject===card.dataset.projectToggle));
+  });
+  projectToggles.forEach(toggle=>toggle.setAttribute('aria-expanded',String(openedProject===toggle.dataset.projectToggle)));
+  document.querySelectorAll('.project-category').forEach(category=>{category.hidden=openedProject!==category.id;});
+  projectPanel.hidden=openedProject===null;
+  carouselStatus.querySelector('.carousel-count').textContent=`${String(activeProject+1).padStart(2,'0')} / ${String(projectCards.length).padStart(2,'0')}`;
+  carouselStatus.querySelector('.carousel-name').textContent=projectNames[activeProject];
+ }
+ function selectProject(index){
+  activeProject=(index+projectCards.length)%projectCards.length;
+  const selected=projectCards[activeProject].dataset.projectToggle;
+  openedProject=selected;
+  renderProjects();
+ }
+ projectToggles.forEach(toggle=>toggle.addEventListener('click',()=>{
+  if(toggle.classList.contains('project-link')&&performance.now()<ignoreCardClickUntil)return;
+  const index=projectCards.findIndex(card=>card.dataset.projectToggle===toggle.dataset.projectToggle);
+  if(index<0)return;
+  if(index===activeProject&&openedProject===toggle.dataset.projectToggle){
+   openedProject=null;
+   renderProjects();
+   return;
+  }
+  selectProject(index);
+  if(!toggle.closest('.project-nav'))document.querySelector('#projects').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+ }));
+ document.querySelectorAll('[data-carousel-step]').forEach(button=>button.addEventListener('click',()=>{
+  selectProject(activeProject+Number(button.dataset.carouselStep));
+ }));
+ const carouselStage=document.querySelector('.carousel-stage');
+ carouselStage.addEventListener('keydown',event=>{
+  if(event.key!=='ArrowLeft'&&event.key!=='ArrowRight')return;
+  event.preventDefault();
+  selectProject(activeProject+(event.key==='ArrowRight'?1:-1));
+ });
+ let pointerStart=null;
+ carouselStage.addEventListener('pointerdown',event=>{
+  if(event.pointerType==='mouse'&&event.button!==0)return;
+  pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
+ });
+ carouselStage.addEventListener('pointerup',event=>{
+  if(!pointerStart||pointerStart.id!==event.pointerId)return;
+  const delta=event.clientX-pointerStart.x;
+  const vertical=Math.abs(event.clientY-pointerStart.y);
+  pointerStart=null;
+  if(Math.abs(delta)>45&&Math.abs(delta)>vertical){
+   ignoreCardClickUntil=performance.now()+500;
+   selectProject(activeProject+(delta<0?1:-1));
+  }
+ });
+ carouselStage.addEventListener('pointercancel',()=>{pointerStart=null;});
+ renderProjects();
  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
  const hero=document.querySelector('.hero');
  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();
